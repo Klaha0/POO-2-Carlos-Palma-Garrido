@@ -1,0 +1,11 @@
+PedidoComida;Los Arrayanes 568;3;Entregado;Pizza Hawaiana;Luis Díaz
+PedidoEncomienda;Santa Rosa 567;7;Entregado;Paquete de libros;Daniela Tapia
+PedidoExpress;Coloso 1584;6;Cancelado;5;
+PedidoComida;Grecia 1450;8;Reservado;Lasaña vegetariana;
+PedidoExpress;Flanders 7683;5;Creado;3;Daniela Tapia
+PedidoEncomienda;Salar de Atacama 7958;10;Reservado;Caja de herramientas;
+PedidoComida;Los Carrera 120;4;Creado;Sushi 30 piezas;
+PedidoExpress;Brasil 230;2;Entregado;8;Daniela Tapia
+PedidoEncomienda;Pasaje Los Robles 45;12;Cancelado;Documentos importantes;
+PedidoComida;Calle Nueva 900;15;Cancelado;Pollo asado;Luis Díaz
+PedidoExpress;Argentina 1234;9;Entregado;2;Daniela Tapia
