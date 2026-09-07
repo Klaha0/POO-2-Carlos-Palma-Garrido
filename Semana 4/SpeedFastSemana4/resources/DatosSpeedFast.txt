@@ -1,0 +1,11 @@
+PedidoComida;Los Arrayanes 568;3;Entregado;Pizza Hawaiana
+PedidoEncomienda;Santa Rosa 567;7;Entregado;Paquete de libros
+PedidoExpress;Coloso 1584;6;Entregado;5
+PedidoComida;Grecia 1450;8;Entregado;Lasaña vegetariana
+PedidoExpress;Flanders 7683;5;Entregado;3
+PedidoEncomienda;Salar de Atacama 7958;10;Entregado;Caja de herramientas
+PedidoComida;Los Carrera 120;4;Cancelado;Sushi 30 piezas
+PedidoExpress;Brasil 230;2;Cancelado;8
+PedidoEncomienda;Pasaje Los Robles 45;12;Entregado;Documentos importantes
+PedidoComida;Calle Nueva 900;15;Creado;Pollo asado
+PedidoExpress;Argentina 1234;9;Creado;2
