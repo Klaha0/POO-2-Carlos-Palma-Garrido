@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SpeedFast" default="compile" basedir=".">
+    <!-- IDEA_HOME se recibe desde compilar.ps1; los .form se instrumentan igual que en IDEA. -->
+    <property environment="env"/>
+    <property name="idea.home" value="${env.IDEA_HOME}"/>
+    <path id="idea.compiler">
+        <fileset dir="${idea.home}/lib" includes="*.jar"/>
+        <fileset dir="${idea.home}/plugins/java/lib" includes="*.jar"/>
+        <fileset dir="${idea.home}/plugins/java/lib/modules" includes="*.jar"/>
+    </path>
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="idea.compiler"/>
+    <target name="compile">
+        <mkdir dir="out/production/SpeedFast"/>
+        <!-- Evita instrumentar dos veces una clase ya compilada por javac2. -->
+        <delete>
+            <fileset dir="out/production/SpeedFast" includes="**/*.class"/>
+        </delete>
+        <javac2 srcdir="src" destdir="out/production/SpeedFast" encoding="UTF-8"
+                release="17" debug="true" includeantruntime="false" instrumentNotNull="false">
+            <classpath><pathelement location="${idea.home}/lib/forms_rt.jar"/></classpath>
+        </javac2>
+    </target>
+    <target name="test" depends="compile">
+        <mkdir dir="out/test"/>
+        <javac srcdir="tests" destdir="out/test" encoding="UTF-8" release="17" includeantruntime="false">
+            <classpath><pathelement location="out/production/SpeedFast"/></classpath>
+        </javac>
+        <java classname="PruebasSpeedFast" fork="true" failonerror="true">
+            <classpath>
+                <pathelement location="out/test"/>
+                <pathelement location="out/production/SpeedFast"/>
+                <pathelement location="${idea.home}/lib/forms_rt.jar"/>
+            </classpath>
+        </java>
+    </target>
+</project>
