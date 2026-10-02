@@ -8,8 +8,8 @@ import java.sql.SQLException;
 public class ConexionBD {
 
     private static final String URL = "jdbc:mysql://localhost:3306/speedfast_db";
-    private static final String USUARIO = "Klaha0";
-    private static final String CLAVE = "klahasama";
+    private static final String USUARIO = "AQUI-USUARIO";
+    private static final String CLAVE = "AQUI-CLAVE";
 
     /**
      * Traduce el estado SQL a un mensaje comprensible conservando la causa original.
